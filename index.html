@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KiRom — Hafizh Ikraam Ghazali</title>
+  <meta name="description" content="Hafizh Ikraam Ghazali — Offensive security enthusiast, CTF competitor, tool builder from Indonesia." />
+
+  <!-- preconnect tells the browser to open the connection early, before it needs the font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!--
+    display=swap means the browser shows your fallback font immediately,
+    then swaps in the real font when it loads — no invisible text while waiting
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- ░░ LOADER ░░ -->
+  <div id="loader">
+    <div class="loader-content">
+
+      <!-- main name reveal -->
+      <div class="loader-name">
+        <span class="ln-word" style="--d:0s">Hafizh</span>
+        <span class="ln-word accent" style="--d:.12s">Ikraam</span>
+        <span class="ln-word" style="--d:.24s">Ghazali</span>
+      </div>
+
+      <!-- handle line -->
+      <div class="loader-handle">
+        <span class="lh-slash">//</span>
+        <span class="lh-alias">KiRom</span>
+        <span class="lh-dot"></span>
+        <span class="lh-role">Offensive Security</span>
+      </div>
+
+      <!-- status + bar -->
+      <div class="loader-bottom">
+        <div class="loader-status">
+          <span id="loader-text">INITIALIZING</span>
+          <span class="loader-blink">█</span>
+        </div>
+        <div class="loader-bar-wrap">
+          <div class="loader-bar" id="loader-bar"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ░░ BACKGROUND FX ░░ -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="scan-line" aria-hidden="true"></div>
+
+  <!-- ░░ NAV ░░ -->
+  <nav id="nav">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo">
+        <span class="nl-bracket">[</span>
+        <span class="nl-name">KiRom</span>
+        <span class="nl-bracket">]</span>
+        <span class="nl-pulse"></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#certs">certs</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+
+      <!-- TERMINAL BUTTON — visible, in nav -->
+      <button class="nav-terminal-btn" id="open-terminal" aria-label="Open terminal">
+        <span class="ntb-icon">▶_</span>
+        <span class="ntb-label">Terminal</span>
+        <span class="ntb-ping"></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-layout">
+
+        <div class="hero-left">
+          <div class="hero-eyebrow reveal-up" style="--delay:.1s">
+            <span class="eyebrow-line"></span>
+            <span>Offensive Security · CTF · Indonesia</span>
+          </div>
+
+          <h1 class="hero-title reveal-up" style="--delay:.22s">
+            <span class="ht-first">Hafizh</span>
+            <span class="ht-last">Ikraam<br>Ghazali</span>
+          </h1>
+
+          <div class="hero-handle reveal-up" style="--delay:.34s">
+            <span class="hh-slash">//</span>
+            <span id="typed-text"></span>
+            <span class="hh-cursor">▌</span>
+          </div>
+
+          <p class="hero-desc reveal-up" style="--delay:.46s">
+            Senior high schooler from Indonesia who got into cybersecurity by wanting to
+            understand how things break. Currently deep in offensive security —
+            web exploitation, recon, and building tools to automate the parts that bore me.
+          </p>
+
+          <div class="hero-actions reveal-up" style="--delay:.58s">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://github.com/SRMOPY" target="_blank" rel="noopener" class="btn btn-outline">
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- right: code card -->
+        <div class="hero-right reveal-fade" style="--delay:.5s">
+          <div class="code-card">
+            <div class="cc-titlebar">
+              <div class="cc-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="cc-filename">operator.ts</span>
+              <span class="cc-lang">TypeScript</span>
+            </div>
+            <div class="cc-body">
+<pre class="cc-code"><span class="tok-kw">interface</span> <span class="tok-type">Operator</span> {
+  name     : <span class="tok-str">"Hafizh Ikraam Ghazali"</span>
+  alias    : <span class="tok-str">"KiRom"</span>
+  github   : <span class="tok-str">"SRMOPY"</span>
+  location : <span class="tok-str">"Indonesia 🇮🇩"</span>
+  focus    : [
+    <span class="tok-str">"web exploitation"</span>,
+    <span class="tok-str">"network recon"</span>,
+    <span class="tok-str">"CTF"</span>,
+    <span class="tok-str">"tool building"</span>,
+  ]
+  status   : <span class="tok-accent">"actively learning"</span>
+  threat   : <span class="tok-warn">ThreatLevel.RISING</span>
+}</pre>
+            </div>
+          </div>
+
+          <!-- floating badges -->
+          <div class="hero-badge b1 reveal-up" style="--delay:.7s">
+            <span class="hb-dot"></span> Offensive Security
+          </div>
+          <div class="hero-badge b2 reveal-up" style="--delay:.85s">
+            <span class="hb-dot red"></span> CTF Active
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- scroll hint -->
+    <div class="scroll-hint reveal-up" style="--delay:1.1s">
+      <span class="sh-line"></span>
+      <span class="sh-text">scroll</span>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="sh-label">
+          <span class="shl-num">01</span>
+          <span class="shl-slash">//</span>
+          <span>Who I Am</span>
+        </div>
+        <h2 class="sh-title">About Me</h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text">
+          <p>
+            I'm a <strong>senior high school student</strong> from Indonesia who stumbled into
+            cybersecurity the honest way — by breaking things and needing to know why they broke.
+            My interest is almost entirely on the <strong>offensive side</strong>: understanding
+            attack surfaces, chaining vulnerabilities, and thinking like the adversary.
+          </p>
+          <p>
+            I compete in CTFs when I can, build tools when something doesn't exist yet,
+            and write things down so future-me doesn't have to relearn them.
+            The goal is to get good enough at breaking systems that I can actually
+            help defend them.
+          </p>
+          <p>
+            Currently looking toward <strong>university applications</strong> and early-career
+            opportunities in offensive security. If you're building something interesting
+            in this space — let's talk.
+          </p>
+        </div>
+
+        <div class="about-skills">
+          <div class="skills-title">Arsenal</div>
+          <div class="skills-grid" id="skills-grid">
+            <div class="skill-item"><span class="si-icon">◈</span>Web Exploitation</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Network Recon</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Python / Scripting</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Bash Automation</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Burp Suite</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Nmap / Masscan</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Linux Systems</div>
+            <div class="skill-item"><span class="si-icon">◈</span>OSINT</div>
+            <div class="skill-item"><span class="si-icon">◈</span>CTF Methodology</div>
+            <div class="skill-item"><span class="si-icon">◈</span>Git / GitHub</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- stats row -->
+      <div class="stats-row" id="stats-row">
+        <div class="stat-card">
+          <span class="sc-num" data-target="0">0</span>
+          <span class="sc-label">Flags Captured</span>
+          <span class="sc-sub">update this</span>
+        </div>
+        <div class="stat-card">
+          <span class="sc-num" data-target="0">0</span>
+          <span class="sc-label">Repos on GitHub</span>
+          <span class="sc-sub">SRMOPY</span>
+        </div>
+        <div class="stat-card">
+          <span class="sc-num" data-target="0">0</span>
+          <span class="sc-label">Certificates</span>
+          <span class="sc-sub">and counting</span>
+        </div>
+        <div class="stat-card">
+          <span class="sc-num">∞</span>
+          <span class="sc-label">Things to Learn</span>
+          <span class="sc-sub">always</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="sh-label">
+          <span class="shl-num">02</span>
+          <span class="shl-slash">//</span>
+          <span>What I've Built</span>
+        </div>
+        <h2 class="sh-title">Projects</h2>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!--
+          HOW TO UPDATE CARDS:
+          - Change href on the <a> to the specific repo URL, e.g.:
+            href="https://github.com/SRMOPY/repo-name"
+          - Update the icon, title, desc, and tags
+          - Add class="featured" to highlight one card
+        -->
+
+        <a href="https://github.com/SRMOPY" target="_blank" rel="noopener" class="proj-card">
+          <div class="pc-top">
+            <div class="pc-icon">🔍</div>
+          </div>
+          <h3 class="pc-title">Recon Toolkit</h3>
+          <p class="pc-desc">
+            Automated subdomain enumeration and port scanning pipeline.
+            Chains subfinder, Nmap, and httpx into a single CLI workflow
+            with clean structured output.
+          </p>
+          <div class="pc-tags">
+            <span class="pct blue">Python</span>
+            <span class="pct">Recon</span>
+            <span class="pct">Automation</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/SRMOPY" target="_blank" rel="noopener" class="proj-card featured">
+          <div class="pc-featured-label">Featured</div>
+          <div class="pc-top">
+            <div class="pc-icon">🕷️</div>
+          </div>
+          <h3 class="pc-title">Web Vuln Scanner</h3>
+          <p class="pc-desc">
+            Lightweight scanner for common web vulnerabilities — SQLi, reflected XSS,
+            open redirects. Built for CTF use and learning. Not a Burp replacement,
+            just a sharp learning tool.
+          </p>
+          <div class="pc-tags">
+            <span class="pct blue">Python</span>
+            <span class="pct red">Web Security</span>
+            <span class="pct">CTF</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/SRMOPY" target="_blank" rel="noopener" class="proj-card">
+          <div class="pc-top">
+            <div class="pc-icon">📝</div>
+          </div>
+          <h3 class="pc-title">CTF Write-ups</h3>
+          <p class="pc-desc">
+            Documented solutions to CTF challenges — HackTheBox, TryHackMe, and local
+            competitions. Written to explain the thought process, not just the flag.
+          </p>
+          <div class="pc-tags">
+            <span class="pct">Write-ups</span>
+            <span class="pct blue">HTB</span>
+            <span class="pct blue">THM</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="projects-footer">
+        <a href="https://github.com/SRMOPY" target="_blank" rel="noopener" class="btn btn-outline">
+          See all on GitHub ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░ CERTIFICATES ░░ -->
+  <section id="certs">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="sh-label">
+          <span class="shl-num">03</span>
+          <span class="shl-slash">//</span>
+          <span>Credentials</span>
+        </div>
+        <h2 class="sh-title">Certificates</h2>
+      </div>
+
+      <div class="certs-grid" id="certs-grid">
+
+        <!--
+          HOW TO FILL THESE IN:
+          - data-name    : certificate title
+          - data-org     : issuer name
+          - data-date    : issued date
+          - data-desc    : short description (shown in modal)
+          - data-url     : link to credential — Credly, issuer site, PDF, etc.
+                           set to "" if you have no link
+        -->
+
+        <div class="cert-card" role="button" tabindex="0"
+             data-name="Your Certificate Name"
+             data-org="Issuing Organization"
+             data-date="2024"
+             data-desc="Brief description of what this certification covers and what you had to do to earn it."
+             data-url="">
+          <div class="cert-glow"></div>
+          <div class="cert-inner">
+            <div class="cert-icon">🏅</div>
+            <div class="cert-info">
+              <div class="cert-name">Your Certificate Name</div>
+              <div class="cert-org">Issuing Organization</div>
+              <div class="cert-date">2024</div>
+            </div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+          <div class="cert-click-hint">click to view ↗</div>
+        </div>
+
+        <div class="cert-card" role="button" tabindex="0"
+             data-name="Another Certificate"
+             data-org="Platform or Issuer"
+             data-date="2024"
+             data-desc="What skills or knowledge this certificate validates. Replace with your real cert info."
+             data-url="">
+          <div class="cert-glow"></div>
+          <div class="cert-inner">
+            <div class="cert-icon">🏅</div>
+            <div class="cert-info">
+              <div class="cert-name">Another Certificate</div>
+              <div class="cert-org">Platform or Issuer</div>
+              <div class="cert-date">2024</div>
+            </div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+          <div class="cert-click-hint">click to view ↗</div>
+        </div>
+
+        <div class="cert-card" role="button" tabindex="0"
+             data-name="Add Your Real Certs"
+             data-org="Replace Placeholder"
+             data-date="2025"
+             data-desc="Add your real certificates here. Update the data attributes on each card."
+             data-url="">
+          <div class="cert-glow"></div>
+          <div class="cert-inner">
+            <div class="cert-icon">🏅</div>
+            <div class="cert-info">
+              <div class="cert-name">Add Your Real Certs</div>
+              <div class="cert-org">Replace Placeholder</div>
+              <div class="cert-date">2025</div>
+            </div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+          <div class="cert-click-hint">click to view ↗</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="sh-label">
+          <span class="shl-num">04</span>
+          <span class="shl-slash">//</span>
+          <span>Reach Out</span>
+        </div>
+        <h2 class="sh-title">Contact</h2>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-left">
+          <p class="contact-desc">
+            Open to university connections, internships, CTF team invites,
+            and anyone building something interesting in the security space.
+            Drop a message or find me on these platforms.
+          </p>
+
+          <div class="contact-links" id="contact-links">
+            <a href="https://github.com/SRMOPY" target="_blank" rel="noopener" class="contact-link">
+              <span class="cl-label">github.com/SRMOPY</span>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="mailto:your@email.com" class="contact-link">
+              <span class="cl-label">your@email.com</span>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="contact-link">
+              <span class="cl-label">LinkedIn</span>
+              <span class="cl-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="cf-field">
+            <label class="cf-label" for="cf-name">NAME</label>
+            <input class="cf-input" id="cf-name" type="text" placeholder="Your name" autocomplete="off" />
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-email">EMAIL</label>
+            <input class="cf-input" id="cf-email" type="email" placeholder="your@email.com" />
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-msg">MESSAGE</label>
+            <textarea class="cf-input" id="cf-msg" rows="5" placeholder="What's on your mind..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary cf-submit">
+            <span id="submit-label">Send Message</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">[KiRom]</span>
+          <span class="footer-copy">© 2025 Hafizh Ikraam Ghazali</span>
+        </div>
+        <div class="footer-right">
+          <span class="footer-hint">Hit <kbd>Ctrl</kbd>+<kbd>`</kbd> or click Terminal in nav</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░ CERT MODAL ░░ -->
+  <div id="cert-overlay" role="dialog" aria-modal="true" aria-label="Certificate details">
+    <div id="cert-modal">
+      <div class="cm-header">
+        <div class="cm-icon">🏅</div>
+        <button class="cm-close" id="cert-close" aria-label="Close">✕</button>
+      </div>
+      <div class="cm-body">
+        <div class="cm-badge">VERIFIED</div>
+        <h3 class="cm-name" id="cm-name">Certificate Name</h3>
+        <div class="cm-meta">
+          <span class="cm-org" id="cm-org">Organization</span>
+          <span class="cm-sep">·</span>
+          <span class="cm-date" id="cm-date">2024</span>
+        </div>
+        <p class="cm-desc" id="cm-desc">Description goes here.</p>
+      </div>
+      <div class="cm-footer">
+        <a href="#" id="cm-link" target="_blank" rel="noopener" class="btn btn-primary cm-view-btn">
+          <span>View Credential</span>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 6.5h11M6.5 1l5.5 5.5L6.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="btn btn-outline cm-close-btn" id="cert-close-2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ░░ TERMINAL MODAL ░░ -->
+  <div id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+    <div id="terminal-window">
+      <div class="tw-titlebar">
+        <div class="tw-dots">
+          <span class="twd-close" id="term-close" title="Close"></span>
+          <span class="twd-min"></span>
+          <span class="twd-max"></span>
+        </div>
+        <span class="tw-title">kirom@kali — bash</span>
+        <div class="tw-spacer"></div>
+      </div>
+      <div class="tw-body" id="term-body"></div>
+      <div class="tw-input-row">
+        <span class="tw-prompt">kirom@kali:~$</span>
+        <input type="text" id="term-input" autocomplete="off" spellcheck="false" placeholder="type 'help'" />
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
