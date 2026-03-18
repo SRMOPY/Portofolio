@@ -83,6 +83,8 @@ body:has(button:hover) #cursor-trail { width: 48px; height: 48px; }
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 var(--pad);
+  position: relative;
+  z-index: 2;
 }
 
 /* ── section labels ────────────────────────────────────── */

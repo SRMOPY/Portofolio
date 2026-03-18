@@ -14,7 +14,6 @@
 
   <div id="cursor"></div>
   <div id="cursor-trail"></div>
-  <div class="noise" aria-hidden="true"></div>
 
   <!-- LOADER -->
   <div id="loader">
@@ -134,7 +133,6 @@
       <div class="sec-label reveal">
         <span class="sl-n">01</span><span class="sl-s">//</span><span>Who I Am</span>
       </div>
-
       <div class="about-grid">
         <h2 class="about-heading reveal">
           Breaking things<br><span class="blue">to understand them.</span>
@@ -199,9 +197,9 @@
 
       <!--
         TO ADD A PROJECT:
-        Copy a <a class="bento-card"> block.
+        Copy an <a class="bento-card"> block.
         Change href to the specific repo URL e.g. https://github.com/SRMOPY/repo-name
-        Use class="bento-card wide" to make a card span 2 columns (use for your best project).
+        Use class="bento-card wide" to span 2 columns.
       -->
       <div class="bento" id="projects-grid">
 
@@ -266,34 +264,29 @@
       </div>
 
       <!--
-        HOW TO FILL THESE IN — 5 data attributes per card:
-
+        HOW TO FILL IN CERT CARDS:
         data-name  = certificate title
         data-org   = issuer name
         data-date  = year issued
-        data-desc  = short description (shown below the image in the modal)
-        data-img   = path to your PNG image, e.g. assets/certificates/cert-google.png
-                     → convert your PDF to PNG (ilovepdf.com works), save in assets/certificates/
-                     → leave data-img="" if you have no image — modal shows text only
+        data-desc  = short description shown in the modal
+        data-img   = path to image e.g. assets/certificates/cert-cisco.webp
+                     leave data-img="" if no image yet
 
         For CTF entries:
-          → change emoji span to 🚩
-          → change cc-badge text to "CTF" and add class "ctf" to the cc-badge span
+          change cc-emoji to 🚩
+          change cc-badge text to "CTF" and add class "ctf"
       -->
       <div class="certs-grid" id="certs-grid">
 
         <div class="cert-card reveal" role="button" tabindex="0"
-             data-name="NiteCTF 2025"
-             data-org="Cryptonite · MIT Manipal"
+             data-name="Your Certificate Name"
+             data-org="Issuing Organization"
              data-date="2024"
-             data-desc="Participated in NiteCTF 2025, a 48-hour online CTF hosted by Cryptonite (MIT Manipal's cybersecurity club). Attempted web exploitation and recon challenges."
-             data-img="assets/certificates/NiteCTF.png">
-          <div class="cc-head">
-            <span class="cc-emoji">🚩</span>
-            <span class="cc-badge ctf">CTF</span>
-          </div>
-          <div class="cc-name">NiteCTF 2025</div>
-          <div class="cc-meta"><span>Cryptonite · MIT Manipal</span><span>·</span><span>2025</span></div>
+             data-desc="Brief description of what this cert covers and what you had to do to earn it."
+             data-img="">
+          <div class="cc-head"><span class="cc-emoji">🏅</span><span class="cc-badge">VERIFIED</span></div>
+          <div class="cc-name">Your Certificate Name</div>
+          <div class="cc-meta"><span>Issuing Organization</span><span>·</span><span>2024</span></div>
           <div class="cc-hint">click to view ↗</div>
         </div>
 
@@ -303,10 +296,7 @@
              data-date="2024"
              data-desc="What skills or knowledge this certificate validates."
              data-img="">
-          <div class="cc-head">
-            <span class="cc-emoji">🏅</span>
-            <span class="cc-badge">VERIFIED</span>
-          </div>
+          <div class="cc-head"><span class="cc-emoji">🏅</span><span class="cc-badge">VERIFIED</span></div>
           <div class="cc-name">Another Certificate</div>
           <div class="cc-meta"><span>Platform or Issuer</span><span>·</span><span>2024</span></div>
           <div class="cc-hint">click to view ↗</div>
@@ -317,11 +307,8 @@
              data-org="Cryptonite · MIT Manipal"
              data-date="2024"
              data-desc="Participated in NiteCTF 2024, a 48-hour online CTF hosted by Cryptonite (MIT Manipal's cybersecurity club). Attempted web exploitation and recon challenges."
-             data-img="assets/certificates/NiteCTF.png">
-          <div class="cc-head">
-            <span class="cc-emoji">🚩</span>
-            <span class="cc-badge ctf">CTF</span>
-          </div>
+             data-img="">
+          <div class="cc-head"><span class="cc-emoji">🚩</span><span class="cc-badge ctf">CTF</span></div>
           <div class="cc-name">NiteCTF 2024</div>
           <div class="cc-meta"><span>Cryptonite · MIT Manipal</span><span>·</span><span>2024</span></div>
           <div class="cc-hint">click to view ↗</div>
@@ -331,12 +318,9 @@
              data-name="Add Your Real Certs"
              data-org="Replace Placeholder"
              data-date="2025"
-             data-desc="Update the 5 data attributes on each card. Convert PDF to PNG, drop in assets/certificates/."
+             data-desc="Update the data attributes on each card. Convert PDF to WebP with squoosh.app, save in assets/certificates/."
              data-img="">
-          <div class="cc-head">
-            <span class="cc-emoji">🏅</span>
-            <span class="cc-badge">VERIFIED</span>
-          </div>
+          <div class="cc-head"><span class="cc-emoji">🏅</span><span class="cc-badge">VERIFIED</span></div>
           <div class="cc-name">Add Your Real Certs</div>
           <div class="cc-meta"><span>Replace Placeholder</span><span>·</span><span>2025</span></div>
           <div class="cc-hint">click to view ↗</div>
@@ -352,7 +336,6 @@
       <div class="sec-label reveal">
         <span class="sl-n">04</span><span class="sl-s">//</span><span>Reach Out</span>
       </div>
-
       <div class="contact-layout">
         <div class="contact-left reveal">
           <h2 class="contact-h">
@@ -407,7 +390,6 @@
   <!-- CERT MODAL -->
   <div id="cert-overlay" role="dialog" aria-modal="true">
     <div id="cert-modal">
-
       <div class="cm-bar">
         <div class="cm-bar-left">
           <span id="cm-emoji">🏅</span>
@@ -415,23 +397,15 @@
         </div>
         <button class="cm-x" id="cert-close" aria-label="Close">✕</button>
       </div>
-
-      <!-- side-by-side: image left, info right -->
       <div class="cm-content">
-
-        <!-- LEFT: certificate image -->
         <div class="cm-img-side" id="cm-img-wrap">
           <img id="cm-img" src="" alt="Certificate" />
           <button class="cm-zoom" id="cm-zoom" title="View fullscreen">⤢</button>
         </div>
-
-        <!-- LEFT alt: shown when no image -->
         <div class="cm-no-img" id="cm-no-img">
           <span class="cm-no-img-icon">📄</span>
-          <span class="cm-no-img-txt">No image yet.<br>Add a PNG to assets/certificates/<br>then set data-img on the card.</span>
+          <span class="cm-no-img-txt">No image yet.<br>Add a WebP to assets/certificates/<br>then set data-img on the card.</span>
         </div>
-
-        <!-- RIGHT: cert info -->
         <div class="cm-info">
           <h3 class="cm-name" id="cm-name"></h3>
           <div class="cm-meta">
@@ -441,17 +415,14 @@
           </div>
           <p class="cm-desc" id="cm-desc"></p>
         </div>
-
       </div>
-
       <div class="cm-foot">
         <button class="btn-ghost" id="cert-close-2">Close</button>
       </div>
-
     </div>
   </div>
 
-  <!-- FULLSCREEN overlay — click image to open -->
+  <!-- FULLSCREEN overlay -->
   <div id="img-fullscreen" aria-label="Fullscreen certificate">
     <img id="fs-img" src="" alt="Certificate fullscreen" />
     <button class="fs-close" id="fs-close">✕</button>
@@ -477,7 +448,6 @@
       </div>
     </div>
   </div>
-
   <script src="main.js"></script>
 </body>
 </html>
