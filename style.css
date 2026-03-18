@@ -603,7 +603,26 @@ body:has(button:hover) #cursor-trail { width: 48px; height: 48px; }
   border: 1px solid var(--border);
 }
 .bct.hi { background: var(--blue-lo); color: var(--blue-hi); border-color: rgba(37,99,235,.25); }
-
+.bct.red {
+  background: rgba(239,68,68,.08);
+  color: #f87171;
+  border-color: rgba(239,68,68,.2);
+}
+.bct.green {
+  background: rgba(34,197,94,.08);
+  color: #22c55e;
+  border-color: rgba(34,197,94,.2);
+}
+.bct.yellow {
+  background: rgba(251,191,36,.08);
+  color: #fbbf24;
+  border-color: rgba(251,191,36,.2);
+}
+.bct.purple {
+  background: rgba(167,139,250,.08);
+  color: #a78bfa;
+  border-color: rgba(167,139,250,.2);
+}
 .bc-live {
   display: flex; align-items: center; gap: 6px;
   font-family: var(--mono); font-size: .67rem; color: var(--text3);
