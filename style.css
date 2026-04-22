@@ -686,6 +686,30 @@ body:has(button:hover) #cursor-trail { width: 48px; height: 48px; }
   border-color: rgba(251,191,36,.2);
 }
 
+.cc-badge.blue {
+  background: rgba(37,99,235,.08);
+  color: #3b82f6;
+  border-color: rgba(37,99,235,.2);
+}
+
+.cc-badge.red {
+  background: rgba(239,68,68,.08);
+  color: #f87171;
+  border-color: rgba(239,68,68,.2);
+}
+
+.cc-badge.purple {
+  background: rgba(167,139,250,.08);
+  color: #a78bfa;
+  border-color: rgba(167,139,250,.2);
+}
+
+.cc-badge.grey {
+  background: rgba(100,100,100,.08);
+  color: #888888;
+  border-color: rgba(100,100,100,.2);
+}
+
 .cc-name {
   font-family: var(--disp); font-size: .97rem; font-weight: 700;
   color: var(--text); line-height: 1.3;
